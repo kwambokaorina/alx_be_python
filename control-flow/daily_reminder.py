@@ -12,17 +12,17 @@ time_bound = input("Is the task time-bound? (yes or no): ").lower()
 # Provide a customized reminder based on priority and time sensitivity
 match priority:
     case "high":
-        reminder = f"The task '{task}' is a high-priority task."
+        reminder = f"Your task: '{task}' is a high-priority task."
     case "medium":
-        reminder = f"The task '{task}' is a medium-priority task."
+        reminder = f"Your task: '{task}' is a medium-priority task."
     case "low":
-        reminder = f"The task '{task}' is a low-priority task."
+        reminder = f"Your task: '{task}' is a low-priority task."
     case _:
-        reminder = f"The task '{task}' has an unknown priority."
+        reminder = f"Your task: '{task}' has an unknown priority."
 
-# Modify the reminder if the task is time-bound
+# Modify the reminder if the task is time-sensitive
 if time_bound == "yes":
-    reminder += " It requires immediate attention today!"
+    reminder += " This requires immediate attention today!"
 
-# Print the customized reminder
+# Print the final reminder
 print(reminder)
