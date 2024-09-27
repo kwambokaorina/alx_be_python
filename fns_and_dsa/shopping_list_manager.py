@@ -2,9 +2,9 @@
 
 def display_menu():
     print("\nShopping List Manager")
-    print("1. Add an item")
-    print("2. Remove an item")
-    print("3. View the list")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
     print("4. Exit")
 
 def add_item(shopping_list):
@@ -29,23 +29,22 @@ def view_list(shopping_list):
             print(f"{index}. {item}")
 
 def main():
-    shopping_list = []  # Initialize an empty shopping list
-
+    shopping_list = []  # Start with an empty list
     while True:
-        display_menu()  # Show the menu to the user
-        choice = input("Choose an option (1-4): ").strip()
+        display_menu()  # Show the menu
+        choice = input("Enter your choice: ").strip()
 
         if choice == '1':
-            add_item(shopping_list)
+            add_item(shopping_list)  # Add an item
         elif choice == '2':
-            remove_item(shopping_list)
+            remove_item(shopping_list)  # Remove an item
         elif choice == '3':
-            view_list(shopping_list)
+            view_list(shopping_list)  # Display the shopping list
         elif choice == '4':
-            print("Exiting the shopping list manager. Goodbye!")
-            break
+            print("Goodbye!")
+            break  # Exit the loop
         else:
-            print("Invalid choice. Please select a valid option (1-4).")
+            print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
