@@ -7,12 +7,12 @@ def display_menu():
     print("3. View the list")
     print("4. Exit")
 
-def add_item(shopping_list):
+def add_item(shoes):
     item = input("Enter the item to add: ").strip()
     shopping_list.append(item)
     print(f"'{item}' has been added to your shopping list.")
 
-def remove_item(shopping_list):
+def remove_item(shoes):
     item = input("Enter the item to remove: ").strip()
     if item in shopping_list:
         shopping_list.remove(item)
